@@ -1,0 +1,1896 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/Donna-ai/Donna"
+
+    >donna-ai (v0.1.0)</a>
+</h1>
+<h4>Donna, the best Virtual Secretary platform</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.donna-ai">module donna-ai</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.donna-ai.donna-ai">
+            function <span class="apidocSignatureSpan"></span>donna-ai
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.donna-ai.InputEntity">
+            function <span class="apidocSignatureSpan">donna-ai.</span>InputEntity
+            <span class="apidocSignatureSpan">(params)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.donna-ai.IntentEntity">
+            function <span class="apidocSignatureSpan">donna-ai.</span>IntentEntity
+            <span class="apidocSignatureSpan">(params)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.donna-ai.OutputEntity">
+            function <span class="apidocSignatureSpan">donna-ai.</span>OutputEntity
+            <span class="apidocSignatureSpan">(params)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.donna-ai.createInputEntity">
+            function <span class="apidocSignatureSpan">donna-ai.</span>createInputEntity
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.donna-ai.createIntentEntity">
+            function <span class="apidocSignatureSpan">donna-ai.</span>createIntentEntity
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.donna-ai.createOutputEntity">
+            function <span class="apidocSignatureSpan">donna-ai.</span>createOutputEntity
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.donna-ai.input">
+            function <span class="apidocSignatureSpan">donna-ai.</span>input
+            <span class="apidocSignatureSpan">(donna)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.donna-ai.intent">
+            function <span class="apidocSignatureSpan">donna-ai.</span>intent
+            <span class="apidocSignatureSpan">(donna)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.donna-ai.output">
+            function <span class="apidocSignatureSpan">donna-ai.</span>output
+            <span class="apidocSignatureSpan">(donna)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">donna-ai.</span>InputEntity.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">donna-ai.</span>IntentEntity.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">donna-ai.</span>OutputEntity.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">donna-ai.</span>config</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">donna-ai.</span>input.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">donna-ai.</span>inputRouter</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">donna-ai.</span>intent.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">donna-ai.</span>intentRouter</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">donna-ai.</span>logger</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">donna-ai.</span>options</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">donna-ai.</span>output.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">donna-ai.</span>outputRouter</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.donna-ai.InputEntity">module donna-ai.InputEntity</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.donna-ai.InputEntity.InputEntity">
+            function <span class="apidocSignatureSpan">donna-ai.</span>InputEntity
+            <span class="apidocSignatureSpan">(params)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.donna-ai.InputEntity.prototype">module donna-ai.InputEntity.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.donna-ai.InputEntity.prototype.getContext">
+            function <span class="apidocSignatureSpan">donna-ai.InputEntity.prototype.</span>getContext
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.donna-ai.InputEntity.prototype.getData">
+            function <span class="apidocSignatureSpan">donna-ai.InputEntity.prototype.</span>getData
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.donna-ai.InputEntity.prototype.getDataTypes">
+            function <span class="apidocSignatureSpan">donna-ai.InputEntity.prototype.</span>getDataTypes
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.donna-ai.InputEntity.prototype.getSenseTypes">
+            function <span class="apidocSignatureSpan">donna-ai.InputEntity.prototype.</span>getSenseTypes
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">donna-ai.InputEntity.prototype.</span>context</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">donna-ai.InputEntity.prototype.</span>data</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">donna-ai.InputEntity.prototype.</span>dataTypes</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">donna-ai.InputEntity.prototype.</span>senseTypes</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.donna-ai.IntentEntity">module donna-ai.IntentEntity</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.donna-ai.IntentEntity.IntentEntity">
+            function <span class="apidocSignatureSpan">donna-ai.</span>IntentEntity
+            <span class="apidocSignatureSpan">(params)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.donna-ai.IntentEntity.prototype">module donna-ai.IntentEntity.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.donna-ai.IntentEntity.prototype.getConfidence">
+            function <span class="apidocSignatureSpan">donna-ai.IntentEntity.prototype.</span>getConfidence
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.donna-ai.IntentEntity.prototype.getContext">
+            function <span class="apidocSignatureSpan">donna-ai.IntentEntity.prototype.</span>getContext
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.donna-ai.IntentEntity.prototype.getEntities">
+            function <span class="apidocSignatureSpan">donna-ai.IntentEntity.prototype.</span>getEntities
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.donna-ai.IntentEntity.prototype.getInput">
+            function <span class="apidocSignatureSpan">donna-ai.IntentEntity.prototype.</span>getInput
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.donna-ai.IntentEntity.prototype.getIntent">
+            function <span class="apidocSignatureSpan">donna-ai.IntentEntity.prototype.</span>getIntent
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.donna-ai.IntentEntity.prototype.setConfidence">
+            function <span class="apidocSignatureSpan">donna-ai.IntentEntity.prototype.</span>setConfidence
+            <span class="apidocSignatureSpan">(newConfidence)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.donna-ai.IntentEntity.prototype.setEntities">
+            function <span class="apidocSignatureSpan">donna-ai.IntentEntity.prototype.</span>setEntities
+            <span class="apidocSignatureSpan">(entities)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.donna-ai.IntentEntity.prototype.setInput">
+            function <span class="apidocSignatureSpan">donna-ai.IntentEntity.prototype.</span>setInput
+            <span class="apidocSignatureSpan">(newInput)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.donna-ai.IntentEntity.prototype.setIntent">
+            function <span class="apidocSignatureSpan">donna-ai.IntentEntity.prototype.</span>setIntent
+            <span class="apidocSignatureSpan">(newIntent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">donna-ai.IntentEntity.prototype.</span>confidence</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">donna-ai.IntentEntity.prototype.</span>entities</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">donna-ai.IntentEntity.prototype.</span>input</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">donna-ai.IntentEntity.prototype.</span>intent</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.donna-ai.OutputEntity">module donna-ai.OutputEntity</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.donna-ai.OutputEntity.OutputEntity">
+            function <span class="apidocSignatureSpan">donna-ai.</span>OutputEntity
+            <span class="apidocSignatureSpan">(params)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.donna-ai.OutputEntity.prototype">module donna-ai.OutputEntity.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.donna-ai.OutputEntity.prototype.getData">
+            function <span class="apidocSignatureSpan">donna-ai.OutputEntity.prototype.</span>getData
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.donna-ai.OutputEntity.prototype.getDataTypes">
+            function <span class="apidocSignatureSpan">donna-ai.OutputEntity.prototype.</span>getDataTypes
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.donna-ai.OutputEntity.prototype.getIntent">
+            function <span class="apidocSignatureSpan">donna-ai.OutputEntity.prototype.</span>getIntent
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.donna-ai.OutputEntity.prototype.getSources">
+            function <span class="apidocSignatureSpan">donna-ai.OutputEntity.prototype.</span>getSources
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.donna-ai.OutputEntity.prototype.setData">
+            function <span class="apidocSignatureSpan">donna-ai.OutputEntity.prototype.</span>setData
+            <span class="apidocSignatureSpan">(newData)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.donna-ai.OutputEntity.prototype.setDataTypes">
+            function <span class="apidocSignatureSpan">donna-ai.OutputEntity.prototype.</span>setDataTypes
+            <span class="apidocSignatureSpan">(newDataTypes)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.donna-ai.OutputEntity.prototype.setIntent">
+            function <span class="apidocSignatureSpan">donna-ai.OutputEntity.prototype.</span>setIntent
+            <span class="apidocSignatureSpan">(newIntent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.donna-ai.OutputEntity.prototype.setSources">
+            function <span class="apidocSignatureSpan">donna-ai.OutputEntity.prototype.</span>setSources
+            <span class="apidocSignatureSpan">(newSources)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">donna-ai.OutputEntity.prototype.</span>data</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">donna-ai.OutputEntity.prototype.</span>dataTypes</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">donna-ai.OutputEntity.prototype.</span>intent</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">donna-ai.OutputEntity.prototype.</span>sources</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.donna-ai.input">module donna-ai.input</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.donna-ai.input.input">
+            function <span class="apidocSignatureSpan">donna-ai.</span>input
+            <span class="apidocSignatureSpan">(donna)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.donna-ai.input.prototype">module donna-ai.input.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.donna-ai.input.prototype.process">
+            function <span class="apidocSignatureSpan">donna-ai.input.prototype.</span>process
+            <span class="apidocSignatureSpan">(input)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.donna-ai.input.prototype.register">
+            function <span class="apidocSignatureSpan">donna-ai.input.prototype.</span>register
+            <span class="apidocSignatureSpan">(meta, handler)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">donna-ai.input.prototype.</span>InputEntity</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">donna-ai.input.prototype.</span>dataTypesEmitter</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">donna-ai.input.prototype.</span>donna</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.donna-ai.intent">module donna-ai.intent</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.donna-ai.intent.intent">
+            function <span class="apidocSignatureSpan">donna-ai.</span>intent
+            <span class="apidocSignatureSpan">(donna)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.donna-ai.intent.prototype">module donna-ai.intent.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.donna-ai.intent.prototype.process">
+            function <span class="apidocSignatureSpan">donna-ai.intent.prototype.</span>process
+            <span class="apidocSignatureSpan">(intentEntity)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.donna-ai.intent.prototype.register">
+            function <span class="apidocSignatureSpan">donna-ai.intent.prototype.</span>register
+            <span class="apidocSignatureSpan">(intent, handler, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">donna-ai.intent.prototype.</span>IntentEntity</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">donna-ai.intent.prototype.</span>donna</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">donna-ai.intent.prototype.</span>emitter</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.donna-ai.output">module donna-ai.output</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.donna-ai.output.output">
+            function <span class="apidocSignatureSpan">donna-ai.</span>output
+            <span class="apidocSignatureSpan">(donna)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.donna-ai.output.prototype">module donna-ai.output.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.donna-ai.output.prototype.process">
+            function <span class="apidocSignatureSpan">donna-ai.output.prototype.</span>process
+            <span class="apidocSignatureSpan">(outputEntity, context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.donna-ai.output.prototype.register">
+            function <span class="apidocSignatureSpan">donna-ai.output.prototype.</span>register
+            <span class="apidocSignatureSpan">(meta, handler)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">donna-ai.output.prototype.</span>OutputEntity</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">donna-ai.output.prototype.</span>donna</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">donna-ai.output.prototype.</span>emitter</span>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.donna-ai" id="apidoc.module.donna-ai">module donna-ai</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.donna-ai.donna-ai" id="apidoc.element.donna-ai.donna-ai">
+        function <span class="apidocSignatureSpan"></span>donna-ai
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Donna(options) {
+
+    // Merge options and defaults
+    options = typeof options === &#x22;undefined&#x22; ? {} : options;
+    this.config = _.cloneDeep(Donna.prototype.defaultOptions);
+    _.merge(this.config, new Config());
+    _.merge(this.config, options);
+
+    this.init();
+
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.donna-ai.InputEntity" id="apidoc.element.donna-ai.InputEntity">
+        function <span class="apidocSignatureSpan">donna-ai.</span>InputEntity
+        <span class="apidocSignatureSpan">(params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function InputEntity(params) {
+    // senseTypes, dataTypes, data, context
+    this.senseTypes = params.senseTypes || [];
+    this.dataTypes = params.dataTypes || [];
+    this.data = params.data || {};
+    this.context = params.context || {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.donna-ai.IntentEntity" id="apidoc.element.donna-ai.IntentEntity">
+        function <span class="apidocSignatureSpan">donna-ai.</span>IntentEntity
+        <span class="apidocSignatureSpan">(params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function IntentEntity(params) {
+    this.setInput(params.input || null);
+    this.setIntent(params.intent || null);
+    this.setEntities(params.entities || {});
+    this.setConfidence(params.confidence || 0.0);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.donna-ai.OutputEntity" id="apidoc.element.donna-ai.OutputEntity">
+        function <span class="apidocSignatureSpan">donna-ai.</span>OutputEntity
+        <span class="apidocSignatureSpan">(params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function OutputEntity(params) {
+    this.setIntent(params.intent || null);
+    this.setSources(params.sources || []);
+    this.setDataTypes(params.dataTypes || []);
+    this.setData(params.data || {});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.donna-ai.createInputEntity" id="apidoc.element.donna-ai.createInputEntity">
+        function <span class="apidocSignatureSpan">donna-ai.</span>createInputEntity
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createInputEntity = function () {
+    return new F(arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    // Speech to Input (Speech recognition)
+    // donna.registerSense(function(donna) {
+    //
+    // });
+
+    var inputEntityFromWit = function(donna, resp) {
+// Create InputEntity instance
+var input = donna.<span class="apidocCodeKeywordSpan">createInputEntity</span>({
+    senseTypes: [],
+    dataTypes: [],
+    data: {},
+    context: {}
+});
+
+return input;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.donna-ai.createIntentEntity" id="apidoc.element.donna-ai.createIntentEntity">
+        function <span class="apidocSignatureSpan">donna-ai.</span>createIntentEntity
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createIntentEntity = function () {
+    return new F(arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+          &#x22;value&#x22;: &#x22;New York&#x22;
+         }
+        ]
+       },
+       &#x22;confidence&#x22;: 1
+   }
+    */
+    var intent = donna.<span class="apidocCodeKeywordSpan">createIntentEntity</span>({
+        input: input,
+        intent: outcome.intent,
+        entities: outcome.entities,
+        confidence: outcome.confidence
+    });
+    return intent;
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.donna-ai.createOutputEntity" id="apidoc.element.donna-ai.createOutputEntity">
+        function <span class="apidocSignatureSpan">donna-ai.</span>createOutputEntity
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createOutputEntity = function () {
+    return new F(arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.donna-ai.input" id="apidoc.element.donna-ai.input">
+        function <span class="apidocSignatureSpan">donna-ai.</span>input
+        <span class="apidocSignatureSpan">(donna)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function InputRouter(donna) {
+    this.donna = donna;
+    donna.logger.info(&#x22;InputRouter constructor&#x22;);
+
+    // Initialize Event Emitters
+    this.dataTypesEmitter = new EventEmitter();
+
+    this.InputEntity = donna.constructor.InputEntity;
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.donna-ai.intent" id="apidoc.element.donna-ai.intent">
+        function <span class="apidocSignatureSpan">donna-ai.</span>intent
+        <span class="apidocSignatureSpan">(donna)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function IntentRouter(donna) {
+    this.donna = donna;
+    donna.logger.verbose(&#x22;IntentRouter constructor&#x22;);
+
+    // Initialize Event Emitter
+    this.emitter = new EventEmitter();
+
+    this.IntentEntity = donna.constructor.IntentEntity;
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+            for (var i = 0, len=outcomes.length; i&#x3c;len; i++) {
+                var outcome = outcomes[i];
+                // Normalize to Intent entity
+                var intent = intentEntityFromWit(donna, input, outcome);
+                // Save intent
+                intents.push(intent);
+                // Send intent
+                donna.<span class="apidocCodeKeywordSpan">intent</span>(intent);
+            }
+            // Return
+            return cb(null, intents);
+        }
+    });
+
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.donna-ai.output" id="apidoc.element.donna-ai.output">
+        function <span class="apidocSignatureSpan">donna-ai.</span>output
+        <span class="apidocSignatureSpan">(donna)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function OutputRouter(donna) {
+    this.donna = donna;
+    donna.logger.info(&#x22;OutputRouter constructor&#x22;);
+
+    // Initialize Event Emitters
+    this.emitter = new EventEmitter();
+
+    this.OutputEntity = donna.constructor.OutputEntity;
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.donna-ai.InputEntity" id="apidoc.module.donna-ai.InputEntity">module donna-ai.InputEntity</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.donna-ai.InputEntity.InputEntity" id="apidoc.element.donna-ai.InputEntity.InputEntity">
+        function <span class="apidocSignatureSpan">donna-ai.</span>InputEntity
+        <span class="apidocSignatureSpan">(params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function InputEntity(params) {
+    // senseTypes, dataTypes, data, context
+    this.senseTypes = params.senseTypes || [];
+    this.dataTypes = params.dataTypes || [];
+    this.data = params.data || {};
+    this.context = params.context || {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.donna-ai.InputEntity.prototype" id="apidoc.module.donna-ai.InputEntity.prototype">module donna-ai.InputEntity.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.donna-ai.InputEntity.prototype.getContext" id="apidoc.element.donna-ai.InputEntity.prototype.getContext">
+        function <span class="apidocSignatureSpan">donna-ai.InputEntity.prototype.</span>getContext
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getContext = function () {
+    return this.context;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.donna-ai.InputEntity.prototype.getData" id="apidoc.element.donna-ai.InputEntity.prototype.getData">
+        function <span class="apidocSignatureSpan">donna-ai.InputEntity.prototype.</span>getData
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getData = function () {
+    return this.data;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    var err = new Error(&#x27;Wit.ai is not setup.&#x27;+
+                      &#x27;Could not find access token.&#x27;);
+    donna.logger.warn(err);
+    return cb(err);
+}
+
+// Get textual form of input
+var data = input.<span class="apidocCodeKeywordSpan">getData</span>();
+
+// Data Types are unique and each have their own
+// specific object format.
+// In this case, a &#x27;text&#x27; data type is a simple
+// object with the field &#x27;text&#x27;.
+var text = data.text; // Extract text format from data
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.donna-ai.InputEntity.prototype.getDataTypes" id="apidoc.element.donna-ai.InputEntity.prototype.getDataTypes">
+        function <span class="apidocSignatureSpan">donna-ai.InputEntity.prototype.</span>getDataTypes
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getDataTypes = function () {
+    return this.dataTypes;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+            // Check if input is instance of InputEntity
+            if (input instanceof this.InputEntity) {
+
+donna.logger.debug(
+    &#x22;Is instance of InputEntity&#x22;);
+
+// Bind to all data types
+var dataTypes = input.<span class="apidocCodeKeywordSpan">getDataTypes</span>() || [];
+var len = dataTypes.length;
+if (len &#x3e; 0) {
+    for (var d = 0; d &#x3c; len; d++) {
+        var dt = dataTypes[d];
+        this.dataTypesEmitter.emit(dt, this.donna, input,
+            function() {
+            // TODO: handle this callback
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.donna-ai.InputEntity.prototype.getSenseTypes" id="apidoc.element.donna-ai.InputEntity.prototype.getSenseTypes">
+        function <span class="apidocSignatureSpan">donna-ai.InputEntity.prototype.</span>getSenseTypes
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getSenseTypes = function () {
+    return this.senseTypes;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.donna-ai.IntentEntity" id="apidoc.module.donna-ai.IntentEntity">module donna-ai.IntentEntity</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.donna-ai.IntentEntity.IntentEntity" id="apidoc.element.donna-ai.IntentEntity.IntentEntity">
+        function <span class="apidocSignatureSpan">donna-ai.</span>IntentEntity
+        <span class="apidocSignatureSpan">(params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function IntentEntity(params) {
+    this.setInput(params.input || null);
+    this.setIntent(params.intent || null);
+    this.setEntities(params.entities || {});
+    this.setConfidence(params.confidence || 0.0);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.donna-ai.IntentEntity.prototype" id="apidoc.module.donna-ai.IntentEntity.prototype">module donna-ai.IntentEntity.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.donna-ai.IntentEntity.prototype.getConfidence" id="apidoc.element.donna-ai.IntentEntity.prototype.getConfidence">
+        function <span class="apidocSignatureSpan">donna-ai.IntentEntity.prototype.</span>getConfidence
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getConfidence = function () {
+    return this.confidence;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.donna-ai.IntentEntity.prototype.getContext" id="apidoc.element.donna-ai.IntentEntity.prototype.getContext">
+        function <span class="apidocSignatureSpan">donna-ai.IntentEntity.prototype.</span>getContext
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getContext = function () {
+    return this.input.getContext();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.donna-ai.IntentEntity.prototype.getEntities" id="apidoc.element.donna-ai.IntentEntity.prototype.getEntities">
+        function <span class="apidocSignatureSpan">donna-ai.IntentEntity.prototype.</span>getEntities
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getEntities = function () {
+    return this.entities;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.donna-ai.IntentEntity.prototype.getInput" id="apidoc.element.donna-ai.IntentEntity.prototype.getInput">
+        function <span class="apidocSignatureSpan">donna-ai.IntentEntity.prototype.</span>getInput
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getInput = function () {
+    return this.input;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.donna-ai.IntentEntity.prototype.getIntent" id="apidoc.element.donna-ai.IntentEntity.prototype.getIntent">
+        function <span class="apidocSignatureSpan">donna-ai.IntentEntity.prototype.</span>getIntent
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getIntent = function () {
+    return this.intent;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+            // Check if intentEntity is instance of IntentEntity
+            if (intentEntity instanceof this.IntentEntity) {
+
+this.donna.logger.debug(
+    &#x22;Is instance of IntentEntity&#x22;);
+
+// Is instance of IntentEntity
+var intent = intentEntity.<span class="apidocCodeKeywordSpan">getIntent</span>();
+
+this.donna.logger.debug(&#x22;Intent:&#x22;, intent);
+
+var handlers = this.emitter.listeners(intent);
+if (handlers.length &#x3e; 0) {
+    this.emitter.emit(intent, this.donna, intentEntity,
+        function(err) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.donna-ai.IntentEntity.prototype.setConfidence" id="apidoc.element.donna-ai.IntentEntity.prototype.setConfidence">
+        function <span class="apidocSignatureSpan">donna-ai.IntentEntity.prototype.</span>setConfidence
+        <span class="apidocSignatureSpan">(newConfidence)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setConfidence = function (newConfidence) {
+    return this.confidence = newConfidence;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.donna-ai.IntentEntity.prototype.setEntities" id="apidoc.element.donna-ai.IntentEntity.prototype.setEntities">
+        function <span class="apidocSignatureSpan">donna-ai.IntentEntity.prototype.</span>setEntities
+        <span class="apidocSignatureSpan">(entities)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setEntities = function (entities) {
+    return this.entities = entities;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.donna-ai.IntentEntity.prototype.setInput" id="apidoc.element.donna-ai.IntentEntity.prototype.setInput">
+        function <span class="apidocSignatureSpan">donna-ai.IntentEntity.prototype.</span>setInput
+        <span class="apidocSignatureSpan">(newInput)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setInput = function (newInput) {
+    return this.input = newInput;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.donna-ai.IntentEntity.prototype.setIntent" id="apidoc.element.donna-ai.IntentEntity.prototype.setIntent">
+        function <span class="apidocSignatureSpan">donna-ai.IntentEntity.prototype.</span>setIntent
+        <span class="apidocSignatureSpan">(newIntent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setIntent = function (newIntent) {
+    return this.intent = newIntent;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.donna-ai.OutputEntity" id="apidoc.module.donna-ai.OutputEntity">module donna-ai.OutputEntity</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.donna-ai.OutputEntity.OutputEntity" id="apidoc.element.donna-ai.OutputEntity.OutputEntity">
+        function <span class="apidocSignatureSpan">donna-ai.</span>OutputEntity
+        <span class="apidocSignatureSpan">(params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function OutputEntity(params) {
+    this.setIntent(params.intent || null);
+    this.setSources(params.sources || []);
+    this.setDataTypes(params.dataTypes || []);
+    this.setData(params.data || {});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.donna-ai.OutputEntity.prototype" id="apidoc.module.donna-ai.OutputEntity.prototype">module donna-ai.OutputEntity.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.donna-ai.OutputEntity.prototype.getData" id="apidoc.element.donna-ai.OutputEntity.prototype.getData">
+        function <span class="apidocSignatureSpan">donna-ai.OutputEntity.prototype.</span>getData
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getData = function () {
+    return this.data;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    var err = new Error(&#x27;Wit.ai is not setup.&#x27;+
+                      &#x27;Could not find access token.&#x27;);
+    donna.logger.warn(err);
+    return cb(err);
+}
+
+// Get textual form of input
+var data = input.<span class="apidocCodeKeywordSpan">getData</span>();
+
+// Data Types are unique and each have their own
+// specific object format.
+// In this case, a &#x27;text&#x27; data type is a simple
+// object with the field &#x27;text&#x27;.
+var text = data.text; // Extract text format from data
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.donna-ai.OutputEntity.prototype.getDataTypes" id="apidoc.element.donna-ai.OutputEntity.prototype.getDataTypes">
+        function <span class="apidocSignatureSpan">donna-ai.OutputEntity.prototype.</span>getDataTypes
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getDataTypes = function () {
+    return this.dataTypes;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+            // Check if input is instance of InputEntity
+            if (input instanceof this.InputEntity) {
+
+donna.logger.debug(
+    &#x22;Is instance of InputEntity&#x22;);
+
+// Bind to all data types
+var dataTypes = input.<span class="apidocCodeKeywordSpan">getDataTypes</span>() || [];
+var len = dataTypes.length;
+if (len &#x3e; 0) {
+    for (var d = 0; d &#x3c; len; d++) {
+        var dt = dataTypes[d];
+        this.dataTypesEmitter.emit(dt, this.donna, input,
+            function() {
+            // TODO: handle this callback
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.donna-ai.OutputEntity.prototype.getIntent" id="apidoc.element.donna-ai.OutputEntity.prototype.getIntent">
+        function <span class="apidocSignatureSpan">donna-ai.OutputEntity.prototype.</span>getIntent
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getIntent = function () {
+    return this.intent;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+            // Check if intentEntity is instance of IntentEntity
+            if (intentEntity instanceof this.IntentEntity) {
+
+this.donna.logger.debug(
+    &#x22;Is instance of IntentEntity&#x22;);
+
+// Is instance of IntentEntity
+var intent = intentEntity.<span class="apidocCodeKeywordSpan">getIntent</span>();
+
+this.donna.logger.debug(&#x22;Intent:&#x22;, intent);
+
+var handlers = this.emitter.listeners(intent);
+if (handlers.length &#x3e; 0) {
+    this.emitter.emit(intent, this.donna, intentEntity,
+        function(err) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.donna-ai.OutputEntity.prototype.getSources" id="apidoc.element.donna-ai.OutputEntity.prototype.getSources">
+        function <span class="apidocSignatureSpan">donna-ai.OutputEntity.prototype.</span>getSources
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getSources = function () {
+    return this.sources;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.donna-ai.OutputEntity.prototype.setData" id="apidoc.element.donna-ai.OutputEntity.prototype.setData">
+        function <span class="apidocSignatureSpan">donna-ai.OutputEntity.prototype.</span>setData
+        <span class="apidocSignatureSpan">(newData)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setData = function (newData) {
+    return this.data = newData;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.donna-ai.OutputEntity.prototype.setDataTypes" id="apidoc.element.donna-ai.OutputEntity.prototype.setDataTypes">
+        function <span class="apidocSignatureSpan">donna-ai.OutputEntity.prototype.</span>setDataTypes
+        <span class="apidocSignatureSpan">(newDataTypes)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setDataTypes = function (newDataTypes) {
+    return this.dataTypes = newDataTypes;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.donna-ai.OutputEntity.prototype.setIntent" id="apidoc.element.donna-ai.OutputEntity.prototype.setIntent">
+        function <span class="apidocSignatureSpan">donna-ai.OutputEntity.prototype.</span>setIntent
+        <span class="apidocSignatureSpan">(newIntent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setIntent = function (newIntent) {
+    return this.intent = newIntent;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.donna-ai.OutputEntity.prototype.setSources" id="apidoc.element.donna-ai.OutputEntity.prototype.setSources">
+        function <span class="apidocSignatureSpan">donna-ai.OutputEntity.prototype.</span>setSources
+        <span class="apidocSignatureSpan">(newSources)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setSources = function (newSources) {
+    return this.sources = newSources;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.donna-ai.input" id="apidoc.module.donna-ai.input">module donna-ai.input</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.donna-ai.input.input" id="apidoc.element.donna-ai.input.input">
+        function <span class="apidocSignatureSpan">donna-ai.</span>input
+        <span class="apidocSignatureSpan">(donna)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function InputRouter(donna) {
+    this.donna = donna;
+    donna.logger.info(&#x22;InputRouter constructor&#x22;);
+
+    // Initialize Event Emitters
+    this.dataTypesEmitter = new EventEmitter();
+
+    this.InputEntity = donna.constructor.InputEntity;
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.donna-ai.input.prototype" id="apidoc.module.donna-ai.input.prototype">module donna-ai.input.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.donna-ai.input.prototype.process" id="apidoc.element.donna-ai.input.prototype.process">
+        function <span class="apidocSignatureSpan">donna-ai.input.prototype.</span>process
+        <span class="apidocSignatureSpan">(input)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">process = function (input) {
+    var deferred = Q.defer();
+    var donna = this.donna;
+
+    try {
+        donna.logger.verbose(&#x22;InputRouter::process :&#x22;,
+            input);
+
+        // Check if input is instance of InputEntity
+        if (input instanceof this.InputEntity) {
+
+            donna.logger.debug(
+                &#x22;Is instance of InputEntity&#x22;);
+
+            // Bind to all data types
+            var dataTypes = input.getDataTypes() || [];
+            var len = dataTypes.length;
+            if (len &#x3e; 0) {
+                for (var d = 0; d &#x3c; len; d++) {
+                    var dt = dataTypes[d];
+                    this.dataTypesEmitter.emit(dt, this.donna, input,
+                        function() {
+                        // TODO: handle this callback
+                        donna.logger.debug(arguments);
+                    });
+                }
+                deferred.resolve();
+            } else {
+                var err = new Error(&#x22;No data types provided for Intent Extractor.&#x22;);
+                deferred.reject(err);
+            }
+
+        } else {
+            var err = new Error(
+                &#x22;Must be instance of InputEntity.&#x22;);
+            donna.logger.error(err);
+            deferred.reject(err);
+        }
+    } catch (error) {
+        deferred.reject(error);
+    }
+    return deferred.promise;
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.donna-ai.input.prototype.register" id="apidoc.element.donna-ai.input.prototype.register">
+        function <span class="apidocSignatureSpan">donna-ai.input.prototype.</span>register
+        <span class="apidocSignatureSpan">(meta, handler)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">register = function (meta, handler) {
+    var deferred = Q.defer();
+
+    this.donna.logger.debug(&#x27;InputRouter::register&#x27;, meta);
+
+    // Check for required fields
+    if (meta.name &#x26;&#x26; meta.description &#x26;&#x26; meta.dataTypes) {
+        this.donna.logger.debug(&#x27;Intent Extractor passes validation&#x27;);
+    } else {
+        deferred.reject(new Error(&#x22;Missing required field&#x22;));
+        return deferred.promise;
+    }
+
+    // Bind to all data types
+    var dataTypes = meta.dataTypes || [];
+    var len = dataTypes.length;
+    if (len &#x3e; 0) {
+        for (var d = 0; d &#x3c; len; d++) {
+            var dt = dataTypes[d];
+            this.dataTypesEmitter.on(dt, handler);
+        }
+        deferred.resolve();
+    } else {
+        var err = new Error(&#x22;No data types provided for Intent Extractor.&#x22;);
+        deferred.reject(err);
+    }
+
+    return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.donna-ai.intent" id="apidoc.module.donna-ai.intent">module donna-ai.intent</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.donna-ai.intent.intent" id="apidoc.element.donna-ai.intent.intent">
+        function <span class="apidocSignatureSpan">donna-ai.</span>intent
+        <span class="apidocSignatureSpan">(donna)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function IntentRouter(donna) {
+    this.donna = donna;
+    donna.logger.verbose(&#x22;IntentRouter constructor&#x22;);
+
+    // Initialize Event Emitter
+    this.emitter = new EventEmitter();
+
+    this.IntentEntity = donna.constructor.IntentEntity;
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+            for (var i = 0, len=outcomes.length; i&#x3c;len; i++) {
+                var outcome = outcomes[i];
+                // Normalize to Intent entity
+                var intent = intentEntityFromWit(donna, input, outcome);
+                // Save intent
+                intents.push(intent);
+                // Send intent
+                donna.<span class="apidocCodeKeywordSpan">intent</span>(intent);
+            }
+            // Return
+            return cb(null, intents);
+        }
+    });
+
+});
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.donna-ai.intent.prototype" id="apidoc.module.donna-ai.intent.prototype">module donna-ai.intent.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.donna-ai.intent.prototype.process" id="apidoc.element.donna-ai.intent.prototype.process">
+        function <span class="apidocSignatureSpan">donna-ai.intent.prototype.</span>process
+        <span class="apidocSignatureSpan">(intentEntity)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">process = function (intentEntity) {
+    var deferred = Q.defer();
+
+    try {
+        this.donna.logger.verbose(&#x22;IntentRouter::process :&#x22;,
+            intentEntity);
+
+        // Check if intentEntity is instance of IntentEntity
+        if (intentEntity instanceof this.IntentEntity) {
+
+            this.donna.logger.debug(
+                &#x22;Is instance of IntentEntity&#x22;);
+
+            // Is instance of IntentEntity
+            var intent = intentEntity.getIntent();
+
+            this.donna.logger.debug(&#x22;Intent:&#x22;, intent);
+
+            var handlers = this.emitter.listeners(intent);
+            if (handlers.length &#x3e; 0) {
+                this.emitter.emit(intent, this.donna, intentEntity,
+                    function(err) {
+                        if (err) {
+                            deferred.reject(err);
+                        } else {
+                            deferred.resolve();
+                        }
+                    });
+            } else {
+                var err = new Error(&#x22;No intent handler for &#x27;&#x22; +
+                    intent + &#x22;&#x27;&#x22;);
+                deferred.reject(err);
+            }
+        } else {
+            var err = new Error(
+                &#x22;Must be instance of IntentEnity.&#x22;);
+            this.donna.logger.error(err);
+            deferred.reject(err);
+        }
+    } catch (error) {
+        deferred.reject(error);
+    }
+    return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.donna-ai.intent.prototype.register" id="apidoc.element.donna-ai.intent.prototype.register">
+        function <span class="apidocSignatureSpan">donna-ai.intent.prototype.</span>register
+        <span class="apidocSignatureSpan">(intent, handler, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">register = function (intent, handler, cb) {
+    this.emitter.on(intent, handler);
+    cb();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.donna-ai.output" id="apidoc.module.donna-ai.output">module donna-ai.output</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.donna-ai.output.output" id="apidoc.element.donna-ai.output.output">
+        function <span class="apidocSignatureSpan">donna-ai.</span>output
+        <span class="apidocSignatureSpan">(donna)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function OutputRouter(donna) {
+    this.donna = donna;
+    donna.logger.info(&#x22;OutputRouter constructor&#x22;);
+
+    // Initialize Event Emitters
+    this.emitter = new EventEmitter();
+
+    this.OutputEntity = donna.constructor.OutputEntity;
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.donna-ai.output.prototype" id="apidoc.module.donna-ai.output.prototype">module donna-ai.output.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.donna-ai.output.prototype.process" id="apidoc.element.donna-ai.output.prototype.process">
+        function <span class="apidocSignatureSpan">donna-ai.output.prototype.</span>process
+        <span class="apidocSignatureSpan">(outputEntity, context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">process = function (outputEntity, context) {
+    var deferred = Q.defer();
+    var donna = this.donna;
+
+    try {
+        donna.logger.verbose(&#x22;OutputRouter::process :&#x22;,
+            outputEntity);
+
+        // Check if outputEntity is instance of OutputEntity
+        if (outputEntity instanceof this.OutputEntity) {
+
+            donna.logger.debug(
+                &#x22;Is instance of OutputEntity&#x22;);
+
+            // Send to all data types
+            var dataTypes = outputEntity.getDataTypes() || [];
+            var len = dataTypes.length;
+            if (len &#x3e; 0) {
+                for (var d = 0; d &#x3c; len; d++) {
+                    var dt = dataTypes[d];
+                    var eventName = &#x22;data-type::&#x22;+dt;
+                    donna.logger.debug(&#x27;Output to event name:&#x27;, eventName);
+                    donna.logger.debug(&#x27;# of Listeners:&#x27;, this.emitter.listeners().length);
+
+                    this.emitter.emit(eventName, this.donna, outputEntity,
+                        function() {
+                        // TODO: handle this callback
+                        donna.logger.debug(arguments);
+                    });
+                }
+                deferred.resolve();
+            } else {
+                var err = new Error(&#x22;No data types provided for Intent Extractor.&#x22;);
+                deferred.reject(err);
+            }
+
+        } else {
+            var err = new Error(
+                &#x22;Must be instance of OutputEntity.&#x22;);
+            donna.logger.error(err);
+            deferred.reject(err);
+        }
+    } catch (error) {
+        deferred.reject(error);
+    }
+    return deferred.promise;
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.donna-ai.output.prototype.register" id="apidoc.element.donna-ai.output.prototype.register">
+        function <span class="apidocSignatureSpan">donna-ai.output.prototype.</span>register
+        <span class="apidocSignatureSpan">(meta, handler)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">register = function (meta, handler) {
+    var deferred = Q.defer();
+    var donna = this.donna;
+
+    donna.logger.debug(&#x27;OutputRouter::register&#x27;, meta);
+
+    // Check for required fields
+    if (meta.name &#x26;&#x26; meta.description &#x26;&#x26; meta.dataTypes) {
+        donna.logger.debug(&#x27;Intent Extractor passes validation&#x27;);
+    } else {
+        var err = new Error(&#x22;Missing required field&#x22;);
+        donna.logger.error(err);
+        deferred.reject(err);
+        return deferred.promise;
+    }
+
+    // Bind to all data types
+    var dataTypes = meta.dataTypes || [];
+    var len = dataTypes.length;
+    if (len &#x3e; 0) {
+        for (var d = 0; d &#x3c; len; d++) {
+            var dt = dataTypes[d];
+            var eventName = &#x22;data-type::&#x22;+dt;
+            donna.logger.debug(&#x27;Output handler bind to event name:&#x27;, eventName);
+            this.emitter.on(eventName, handler);
+        }
+        deferred.resolve();
+    } else {
+        var err = new Error(&#x22;No data types provided for Intent Extractor.&#x22;);
+        deferred.reject(err);
+    }
+
+    return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
